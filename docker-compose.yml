@@ -1,0 +1,13 @@
+services:
+  roboty4u:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3010:3010"
+    env_file:
+      - .env.local
+    restart: unless-stopped
+    volumes:
+      # Mount videos at runtime so you can add new ones without rebuilding
+      - ./public/videos:/app/public/videos:ro
