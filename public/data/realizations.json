@@ -1,0 +1,27 @@
+{
+  "sectionLabel": "Rozwiązania",
+  "heading": "Nasze Realizacje",
+  "items": [
+    {
+      "projectCode": "Projekt #1",
+      "title": "Spawanie MIG/MAG z czujnikiem siły",
+      "videoSrc": "/videos/1515A LASER Oval 01_1.mp4",
+      "description": "Wdrożenie zaawansowanego stanowiska spawalniczego opartego na robocie przemysłowym wyposażonym w Force Sensor. System dynamicznie koryguje parametry spoiny w zależności od nacisku i geometrii detalu, zapewniając zerowy poziom odrzutów.",
+      "tags": ["MIG/MAG", "Force Sensor"]
+    },
+    {
+      "projectCode": "Projekt #2",
+      "title": "COBOT: Spawanie Laserowe",
+      "videoSrc": "/videos/1515A LASER Oval 01_2.mp4",
+      "description": "Innowacyjna cela spawalnicza wykorzystująca robota współpracującego do precyzyjnego spawania laserowego cienkich blach. Cobot pozwala operatorowi na bezpieczną pracę w bezpośrednim sąsiedztwie przy minimalnej konfiguracji.",
+      "tags": ["Laser", "Collaboration"]
+    },
+    {
+      "projectCode": "Projekt #3",
+      "title": "Cięcie profili i rur laserem",
+      "videoSrc": "/videos/Laser do Rur i Profili 01_3.mp4",
+      "description": "W pełni zautomatyzowana linia do cięcia 3D profili stalowych. Integracja z systemem ERP pozwala na dynamiczne zarządzanie kolejką zleceń i minimalizację odpadu materiałowego.",
+      "tags": ["3D Cutting", "ERP Integration"]
+    }
+  ]
+}

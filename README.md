@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ROBOTY4U — Strona Internetowa
 
-## Getting Started
+Firmowa strona internetowa dla **ROBOTY4U** — polskiego integratora systemów zrobotyzowanych dla przemysłu.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## O projekcie
+
+Strona typu **single-page** zbudowana w Next.js 16 (App Router), prezentująca pełną ofertę firmy: od robotów spawalniczych po systemy paletyzacji i sterowania. Projekt realizuje autorski system designu **„Kinetic Monolith"** — estetykę przemysłowej sali kontrolnej z dominującym kolorem Signal Yellow (`#e1ed00`) na tle obsydianowej czerni.
+
+### Sekcje
+
+| Sekcja               | Opis                                                                                            |
+| -------------------- | ----------------------------------------------------------------------------------------------- |
+| **Hero**             | Pełnoekranowy nagłówek z tłem robota, kluczowymi wskaźnikami (wydajność / precyzja / serwis)    |
+| **O nas**            | Prezentacja firmy z animowaną fotografią i kafelkami kompetencji                                |
+| **Oferta**           | Siatka 6 typów robotów z danymi technicznymi (udźwig, zasięg, osie)                             |
+| **Nasze Realizacje** | Alternujący układ z wbudowanymi odtwarzaczami wideo (natywny `<video>`) prezentujący 3 projekty |
+| **Kontakt**          | Dane oddziałów Warszawa i Śląsk + formularz zapytania                                           |
+
+---
+
+## Architektura danych
+
+Wszystkie teksty wyświetlane na stronie są zarządzane przez pliki JSON w `public/data/` — po jednym na sekcję:
+
+```
+public/
+  data/
+    nav.json          # Nawigacja i CTA
+    hero.json         # Sekcja główna + statystyki
+    about.json        # O nas — akapity, cechy firmy
+    offer.json        # Katalog robotów ze specyfikacjami
+    realizations.json # Realizacje — tytuły, opisy, ścieżki do filmów
+    contact.json      # Dane sekcji kontakt (bez danych osobowych)
+    footer.json       # Stopka — kolumny linków
+  videos/             # Filmy demonstracyjne (MP4)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stos technologiczny
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Technologia      | Wersja | Zastosowanie                              |
+| ---------------- | ------ | ----------------------------------------- |
+| Next.js          | 16     | Framework (App Router, SSR)               |
+| React            | 19     | UI                                        |
+| TypeScript       | 5      | Typowanie                                 |
+| Tailwind CSS     | 4      | Style                                     |
+| `next/font`      | —      | Ładowanie czcionek (Space Grotesk, Inter) |
+| Material Symbols | —      | Ikony (CDN Google Fonts)                  |
+| HTML5 `<video>`  | —      | Odtwarzacz filmów realizacji              |

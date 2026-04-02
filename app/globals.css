@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Kinetic Monolith Design Tokens ── */
+  --color-background:               #131313;
+  --color-surface:                  #131313;
+  --color-surface-dim:              #131313;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low:    #1b1b1b;
+  --color-surface-container:        #1f1f1f;
+  --color-surface-container-high:   #2a2a2a;
+  --color-surface-container-highest:#353535;
+  --color-surface-variant:          #353535;
+  --color-surface-bright:           #393939;
+
+  --color-on-background:            #e2e2e2;
+  --color-on-surface:               #e2e2e2;
+  --color-on-surface-variant:       #c8c8ab;
+
+  --color-primary:                  #ffffff;
+  --color-on-primary:               #303300;
+  --color-primary-fixed:            #e1ed00;
+  --color-primary-fixed-dim:        #c5cf00;
+  --color-on-primary-fixed:         #1b1d00;
+  --color-on-primary-fixed-variant: #464a00;
+  --color-primary-container:        #e1ed00;
+  --color-on-primary-container:     #646900;
+  --color-inverse-primary:          #5e6300;
+  --color-surface-tint:             #c5cf00;
+
+  --color-secondary:                #ffb4a8;
+  --color-on-secondary:             #690100;
+  --color-secondary-fixed:          #ffdad4;
+  --color-secondary-fixed-dim:      #ffb4a8;
+  --color-secondary-container:      #ff5540;
+  --color-on-secondary-container:   #5c0000;
+
+  --color-tertiary:                 #ffffff;
+  --color-on-tertiary:              #2f3131;
+  --color-tertiary-fixed:           #e2e2e2;
+  --color-tertiary-fixed-dim:       #c6c6c7;
+  --color-on-tertiary-fixed:        #1a1c1c;
+  --color-on-tertiary-fixed-variant:#454747;
+  --color-tertiary-container:       #e2e2e2;
+  --color-on-tertiary-container:    #636565;
+
+  --color-error:                    #ffb4ab;
+  --color-on-error:                 #690005;
+  --color-error-container:          #93000a;
+  --color-on-error-container:       #ffdad6;
+
+  --color-outline:                  #929278;
+  --color-outline-variant:          #474832;
+
+  --color-inverse-surface:          #e2e2e2;
+  --color-inverse-on-surface:       #303030;
+
+  /* ── Typography Families ── */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body:     "Inter", sans-serif;
+  --font-label:    "Inter", sans-serif;
+
+  /* ── Border radius — angular/industrial ── */
+  --radius:    0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ── Base Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #131313;
+  color: #e2e2e2;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+::selection {
+  background-color: #e1ed00;
+  color: #1b1d00;
+}
+
+/* ── Glassmorphism HUD ── */
+.glass-hud {
+  background: rgba(53, 53, 53, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Tight letter-spacing stamp ── */
+.tracking-stamp { letter-spacing: -0.02em; }
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Nav underline on hover ── */
+.nav-link {
+  position: relative;
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s ease;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e1ed00;
+  transition: width 0.25s ease;
+}
+.nav-link:hover { color: #fff; }
+.nav-link:hover::after { width: 100%; }
+
+/* ── Signal glow on primary button ── */
+.btn-primary {
+  background: #e1ed00;
+  color: #1b1d00;
+  font-weight: 900;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+  border-radius: 0.125rem;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 24px rgba(225, 237, 0, 0.4);
+}
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-secondary {
+  border: 1px solid rgba(225, 237, 0, 0.2);
+  color: #fff;
+  font-weight: 900;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: background 0.25s ease;
+  border-radius: 0.125rem;
+}
+.btn-secondary:hover { background: rgba(225, 237, 0, 0.08); }
+
+/* ── Offer card hover ── */
+.offer-card { transition: background 0.4s ease; }
+.offer-card:hover { background: #2a2a2a; }
+
+/* ── Image zoom on realization hover ── */
+.real-img-wrap { overflow: hidden; }
+.real-img-wrap img {
+  transition: transform 0.9s ease;
+}
+.real-img-wrap:hover img { transform: scale(1.05); }
+
+/* ── Focus input scanning line ── */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-bottom-color: #e1ed00 !important;
+}
+
+/* ── Footer hover shift ── */
+.footer-link {
+  color: #6b7280;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+.footer-link:hover {
+  color: #e1ed00;
+  transform: translateX(4px);
 }

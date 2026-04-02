@@ -1,0 +1,10 @@
+{
+  "brand": "ROBOTY4U",
+  "links": [
+    { "href": "#about", "label": "O nas" },
+    { "href": "#offer", "label": "Oferta" },
+    { "href": "#realizations", "label": "Realizacje" },
+    { "href": "#contact", "label": "Kontakt" }
+  ],
+  "cta": "Zapytaj o wycenę"
+}

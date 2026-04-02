@@ -1,0 +1,23 @@
+{
+  "sectionLabel": "O nas",
+  "heading1": "Eksperci od integracji",
+  "heading2": "Systemów zrobotyzowanych",
+  "glassLabel": "Misja",
+  "glassMission": "Synergia wiedzy inżynierskiej i innowacji.",
+  "paragraphs": [
+    "Nasza firma oferuje kompleksowe systemy zrobotyzowane dla szerokiej gamy procesów produkcyjnych. Naszą misją jest dostarczanie innowacyjnych rozwiązań, które nie tylko zwiększają wydajność, ale również podnoszą standardy bezpieczeństwa pracy.",
+    "Dzięki synergii zaawansowanej wiedzy inżynierskiej i wieloletniego doświadczenia, tworzymy rozwiązania \"szyte na miarę\". Specjalizujemy się w projektowaniu stanowisk zrobotyzowanych, pełnej integracji z liniami produkcyjnymi, zaawansowanych systemach wizualizacji oraz profesjonalnym doradztwie technicznym."
+  ],
+  "features": [
+    {
+      "icon": "precision_manufacturing",
+      "title": "Stanowiska",
+      "description": "Projektowanie od podstaw"
+    },
+    {
+      "icon": "integration_instructions",
+      "title": "Integracja",
+      "description": "Z istniejącymi liniami"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "label": "Technologia Przyszłości",
+  "headline1": "AUTOMATYZACJA PRZEMYSŁU",
+  "headline2": "I ROBOTYZACJA",
+  "headline3": "PROCESÓW",
+  "description": "Zwiększ wydajność i bezpieczeństwo w swoim zakładzie produkcyjnym dzięki zaawansowanym systemom zrobotyzowanym dostosowanym do Twoich potrzeb.",
+  "ctaPrimary": "Skontaktuj się z nami",
+  "ctaSecondary": "Zobacz ofertę",
+  "stats": [
+    { "label": "Wydajność", "value": "+45%" },
+    { "label": "Precyzja", "value": "0.02mm" },
+    { "label": "Serwis", "value": "24/7" }
+  ]
+}

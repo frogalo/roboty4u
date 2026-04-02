@@ -1,0 +1,31 @@
+{
+  "brand": "ROBOTY4U",
+  "tagline": "Lider w dostarczaniu innowacyjnych systemów robotyzacji procesów produkcyjnych w Polsce.",
+  "columns": [
+    {
+      "title": "Nawigacja",
+      "links": [
+        { "label": "O nas", "href": "#about" },
+        { "label": "Oferta", "href": "#offer" },
+        { "label": "Realizacje", "href": "#realizations" },
+        { "label": "Kontakt", "href": "#contact" }
+      ]
+    },
+    {
+      "title": "Wsparcie",
+      "links": [
+        { "label": "Serwis 24/7", "href": "#" },
+        { "label": "Kariera", "href": "#" },
+        { "label": "Części zamienne", "href": "#" }
+      ]
+    },
+    {
+      "title": "Legal",
+      "links": [
+        { "label": "Polityka Prywatności", "href": "#" },
+        { "label": "Warunki Współpracy", "href": "#" }
+      ]
+    }
+  ],
+  "copyright": "© 2026 ROBOTY4U. SYSTEMY ZROBOTYZOWANE. WSZELKIE PRAWA ZASTRZEŻONE."
+}

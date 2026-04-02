@@ -1,0 +1,32 @@
+{
+  "sectionLabel": "Kontakt",
+  "heading": "Zacznijmy projekt",
+  "contacts": [
+    {
+      "icon": "location_on",
+      "city": "Warszawa"
+    },
+    {
+      "icon": "factory",
+      "city": "Śląsk / Kochcice"
+    }
+  ],
+  "form": {
+    "fields": [
+      { "id": "name", "label": "Imię i Nazwisko", "type": "text", "placeholder": "Np. Jan Kowalski" },
+      { "id": "email", "label": "Adres E-mail", "type": "email", "placeholder": "kontakt@firma.pl" }
+    ],
+    "selectLabel": "Rodzaj Robota / Procesu",
+    "selectOptions": [
+      "Wybierz opcję...",
+      "Spawanie MIG/MAG",
+      "Paletyzacja",
+      "Obsługa Maszyn (Cobot)",
+      "Malowanie",
+      "Inne / Doradztwo"
+    ],
+    "messageLabel": "Wiadomość",
+    "messagePlaceholder": "Opisz swoje potrzeby...",
+    "submitLabel": "Wyślij zapytanie"
+  }
+}

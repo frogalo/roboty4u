@@ -1,0 +1,73 @@
+{
+  "sectionLabel": "Nasza Oferta",
+  "heading": "Technologia Robotów",
+  "catalogLabel": "Katalog 2026.01",
+  "robots": [
+    {
+      "index": "01",
+      "title": "Roboty ogólnego przeznaczenia",
+      "imageAlt": "Ciężki przemysłowy robot 6-osiowy z srebrnymi i żółtymi akcentami na ciemnym tle",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCbObrq_RbvzaQyamBFSh5oIb2mxZd5rzA9IWBXuSooto78ldQEFE-Vvj8NlpYeze9uLrCYf8oiADAClD129-_uZeUoxel_2q_mjQSX5cBxnF4V47HtNp_s0vZ9x98ZdWyJ-Or2WtgF5GPd_w0ZdjDU4ErxPwhOygC0wG8XNSqC0APjRCuV-ykR3YJGwyMTqbF6aed2EJK7xpqC1o7DqP3mKbY-Xzjg1dX4-I6j8DRVpVXpfswBdWx_cqj_kFk6-iD_lvRNncqVBvAS",
+      "specs": [
+        { "label": "Udźwig", "value": "do 500 kg" },
+        { "label": "Zasięg", "value": "3050 mm" },
+        { "label": "Osie", "value": "6 osi" }
+      ]
+    },
+    {
+      "index": "02",
+      "title": "Roboty spawalnicze",
+      "imageAlt": "Palnik spawalniczy robota w akcji z iskrami, precyzyjna produkcja",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuD53ud0uBwINNlgwLJ3VofTOM1P0YVav1-OtJSLnG0eHMc95sibVyiT2g6fTs6KcBYURojwqTAVyOOLQNjnicYiOG4ddVq3ThpasRX6dTEq3yJND6aubQYbYSkAFgU5K39bof96udQ0CchfXx1EVMVLpa0T21PcRzVlpG-raxpPtDA5kTx6OwafUXxjlWGIke7TECvAUVkcF4-uj39QxNJmAguQONFOq3ITMcwEkMLxazdQ5oXHVLQBLAyuIOlbOkg7hDIi73Iy2zuB",
+      "specs": [
+        { "label": "Udźwig", "value": "6 kg" },
+        { "label": "Zasięg", "value": "2200 mm" },
+        { "label": "Osie", "value": "6 osi" }
+      ]
+    },
+    {
+      "index": "03",
+      "title": "Roboty współpracujące \"COBOT\"",
+      "imageAlt": "Smukły biały robot współpracujący zaprojektowany do interakcji z człowiekiem",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDcmsyH7kGP19WMukkPwyUxQKxqXBVVvzfb0DH-FNiAgi2dYOpkFrv5wRfQ9THP8hNoT-VnCxlvGjbKXc8Ug-cq21DrjwIj_7ZArvw98PNb0LFW1nWDdL5n1vrhI482lrbL7DLAAy_0_X9HJ-KLUVERZ-L-WoRaJt0djGocPE2fOiukioNkFHblj6jI3eoOiwEYlpqZjhtg2hbDqwi3CEQXjLCND7DqFU54myvqL8LalRxgGt_w5YqMFt6haex0sNBTZY9-yIDWQN5W",
+      "specs": [
+        { "label": "Udźwig", "value": "15 kg" },
+        { "label": "Zasięg", "value": "1500 mm" },
+        { "label": "Atut", "value": "Łatwa nauka" }
+      ]
+    },
+    {
+      "index": "04",
+      "title": "Roboty paletyzujące",
+      "imageAlt": "Masywne ramię robota do paletyzacji ciężkich skrzynek w magazynie",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBUfT4-4kjHvuiUcTBeyKOsuUrbGAGXfiCBxHShieplUVk6TuWwd0YmGFQsNOJjF5QSIVxP_PYLc0TKeWlr_MFyvcQOu2ZU0vPqT-fQtNW8-75eINjrbIaA-1XKBuuGl_ssj2P3-RbZKPsGP42L5Xkh_XO2yAs81SsqoSTWTuJo-AsJjfQj6ciwKGcJyfh89DybP4myKhFVhfWNNORtCER0WTs5QO7r0Nzrk-X2eldzGl2UJIKeqk_Niq2gKRLRl9e1WqEi6wpDL4Q-",
+      "specs": [
+        { "label": "Udźwig", "value": "300 kg" },
+        { "label": "Zasięg", "value": "3020 mm" },
+        { "label": "Osie", "value": "4 osie" }
+      ]
+    },
+    {
+      "index": "05",
+      "title": "Roboty malarskie",
+      "imageAlt": "Przemysłowy robot malarski natryskujący podwozie pojazdu z precyzją",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDVOcwMKBTYgRJX6wBC4rew7ixWq3dltcwY3gi-NFipVxotaoxOVsjnRUd693CWOk6peXOwAOs9MrQvXe2-iqVhkQyoPKnq6BKL2tNEA2DIOSYeuxoeh1pIpqzFmFzE4FAEMZJqgeDv7jPm-8k0p_5QWf4IKYfsPpktj5eOze3ucKKNAnn33uhoUjcqOFVyQHL7UmccBwS_F3ODcGuYkyLm2lP4PLSMKf5hions5KgDZFvsSiLqEyRnwnaEGFrEcH-vL3d9b7_vVj6b",
+      "specs": [
+        { "label": "Udźwig", "value": "13 kg" },
+        { "label": "Zasięg", "value": "2134 mm" },
+        { "label": "Klasa", "value": "Wodoszczelne" }
+      ]
+    },
+    {
+      "index": "06",
+      "title": "Systemy sterowania",
+      "isHighlight": true,
+      "icon": "settings_input_component",
+      "specs": [
+        { "label": "Standard", "value": "PLC / HMI" },
+        { "label": "Nadzór", "value": "SCADA" },
+        { "label": "Support", "value": "Remote" }
+      ]
+    }
+  ]
+}
