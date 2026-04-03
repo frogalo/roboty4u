@@ -22,9 +22,7 @@ Strona typu **single-page** zbudowana w Next.js 16 (App Router), prezentująca p
 
 ## Architektura danych
 
-Wszystkie teksty wyświetlane na stronie są zarządzane przez pliki JSON w `public/data/` — po jednym na sekcję:
-
-```
+```text
 public/
   data/
     nav.json          # Nawigacja i CTA
@@ -35,7 +33,18 @@ public/
     contact.json      # Dane sekcji kontakt (bez danych osobowych)
     footer.json       # Stopka — kolumny linków
   videos/             # Filmy demonstracyjne (MP4)
+  images/readme/      # Zrzuty ekranu (podgląd interfejsu)
 ```
+
+### Podgląd interfejsu
+
+![Hero](public/images/readme/hero.png)
+
+![Oferta](public/images/readme/oferta.png)
+
+![Rozwiązania](public/images/readme/rozwiazania.png)
+
+![Kontakt](public/images/readme/kontakt.png)
 
 ---
 
