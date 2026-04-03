@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface VideoPlayerProps {
   src: string;
@@ -11,13 +11,34 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(true);
   const [progress, setProgress] = useState(0);
+  const hideTimer = useRef<NodeJS.Timeout | null>(null);
+
+  const showControlsTemporarily = () => {
+    setControlsVisible(true);
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    hideTimer.current = setTimeout(() => {
+      setControlsVisible(false);
+    }, 1000);
+  };
 
   const toggle = () => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); }
-    else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+      showControlsTemporarily();
+    } else {
+      v.pause();
+      setPlaying(false);
+      setControlsVisible(true); // Keep visible when paused
+    }
+  };
+
+  const handleMouseMove = () => {
+    if (playing) showControlsTemporarily();
   };
 
   const handleTimeUpdate = () => {
@@ -34,14 +55,31 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     const ratio = (e.clientX - rect.left) / rect.width;
     v.currentTime = ratio * v.duration;
     setProgress(ratio);
+    showControlsTemporarily();
   };
+
+  useEffect(() => {
+    if (!playing) {
+      setControlsVisible(true);
+    }
+    return () => {
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+    };
+  }, [playing]);
+
+  // Combined visibility logic
+  const isVisible = !playing || hovered || controlsVisible;
 
   return (
     <div
-      className="relative cursor-pointer select-none"
+      className="relative cursor-pointer select-none overflow-hidden"
       style={{ background: "#0e0e0e", aspectRatio: "16/9" }}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseLeave={() => {
+        setHovered(false);
+        if (playing) setControlsVisible(false);
+      }}
+      onMouseMove={handleMouseMove}
       onClick={toggle}
     >
       {/* Native video */}
@@ -59,17 +97,20 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
 
       {/* Gradient overlay */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500"
         style={{
           background: "linear-gradient(to top, rgba(13,13,13,0.85) 0%, transparent 60%)",
-          opacity: hovered || !playing ? 1 : 0.3,
+          opacity: isVisible ? 1 : 0,
         }}
       />
 
       {/* Play / Pause button */}
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300"
-        style={{ opacity: !playing || hovered ? 1 : 0 }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-500"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "scale(1)" : "scale(0.9)",
+        }}
       >
         <div
           style={{
@@ -104,8 +145,8 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         className="absolute bottom-0 left-0 right-0 pointer-events-auto"
         style={{
           padding: "0 0 0 0",
-          opacity: hovered || !playing ? 1 : 0,
-          transition: "opacity 0.3s ease",
+          opacity: isVisible ? 1 : 0,
+          transition: "opacity 0.5s ease",
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -130,3 +171,4 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     </div>
   );
 }
+

@@ -1,12 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
-interface NavData {
-  brand: string;
-  links: { href: string; label: string }[];
-  cta: string;
-}
+import { NavData } from "../types";
 
 export default function NavBar({ data }: { data: NavData }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,11 +11,23 @@ export default function NavBar({ data }: { data: NavData }) {
   return (
     <header className="fixed top-0 w-full z-50"
       style={{ background: "rgba(19,19,19,0.85)", backdropFilter: "blur(20px)", boxShadow: "0 8px 40px rgba(0,0,0,0.5)" }}>
-      <nav className="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
-        {/* Brand */}
-        <a href="#" className="text-2xl font-black tracking-stamp brand-font"
-          style={{ color: "#e1ed00", letterSpacing: "-0.04em" }}>
-          {data.brand}
+      <nav className="flex justify-between items-center px-8 py-2 max-w-[1440px] mx-auto">
+        {/* Brand/Logo */}
+        <a href="#" className="flex items-center gap-4">
+          <Image 
+            src="/images/logo.png" 
+            alt={data.brand} 
+            width={180} 
+            height={48} 
+            className="h-10 w-auto"
+            priority
+          />
+          <span 
+            className="text-2xl font-black tracking-stamp brand-font"
+            style={{ color: "#e1ed00", letterSpacing: "-0.04em" }}
+          >
+            {data.brand}
+          </span>
         </a>
 
         {/* Desktop nav */}
@@ -38,7 +47,7 @@ export default function NavBar({ data }: { data: NavData }) {
           className="md:hidden"
           style={{ color: "#e1ed00" }}
           aria-label="Otwórz menu"
-          onClick={() => setMenuOpen((v) => !v)}
+          onClick={() => setMenuOpen((v: boolean) => !v)}
         >
           <span className="material-symbols-outlined">{menuOpen ? "close" : "menu"}</span>
         </button>
